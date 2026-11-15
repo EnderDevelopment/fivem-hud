@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Custom HUD</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main id="hud" class="hud position-right" aria-label="Player HUD">
+    <section class="status-panel" aria-label="Player status">
+      <div class="status-row" data-status="health"><span class="status-icon">+</span><div class="meter"><div class="meter-fill health-fill"></div></div><span class="status-value">100</span></div>
+      <div class="status-row" data-status="armor"><span class="status-icon">◆</span><div class="meter"><div class="meter-fill armor-fill"></div></div><span class="status-value">0</span></div>
+      <div class="status-row" data-status="hunger"><span class="status-icon">◉</span><div class="meter"><div class="meter-fill hunger-fill"></div></div><span class="status-value">100</span></div>
+      <div class="status-row" data-status="thirst"><span class="status-icon">◆</span><div class="meter"><div class="meter-fill thirst-fill"></div></div><span class="status-value">100</span></div>
+      <div class="status-row optional" data-status="stamina"><span class="status-icon">↯</span><div class="meter"><div class="meter-fill stamina-fill"></div></div><span class="status-value">100</span></div>
+      <div class="status-row optional" data-status="stress"><span class="status-icon">~</span><div class="meter"><div class="meter-fill stress-fill"></div></div><span class="status-value">0</span></div>
+      <div class="voice-row"><span class="voice-label">VOICE</span><div class="voice-levels"><i></i><i></i><i></i></div><span class="talk-indicator">MIC</span></div>
+    </section>
+    <section id="location" class="location-panel">
+      <span id="direction" class="direction">N</span>
+      <span class="location-copy"><strong id="street">Los Santos</strong><small id="crossing"></small></span>
+    </section>
+    <section id="vehicle" class="vehicle-panel" hidden>
+      <div class="speed-block"><strong id="speed">0</strong><span id="unit">MPH</span></div>
+      <div class="vehicle-details"><span>GEAR <b id="gear">P</b></span><span>FUEL <b id="fuel">100%</b></span></div>
+      <div class="vehicle-bars"><span class="engine-indicator">ENGINE</span><div class="fuel-meter"><i id="fuel-bar"></i></div><span id="belt" class="belt-indicator">BELT</span></div>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
